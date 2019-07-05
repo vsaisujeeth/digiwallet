@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button ></ion-menu-button>
+        </ion-buttons>
+    <ion-title>transactions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card  *ngFor="let trans of transactions" [routerLink]="['/transactions','transaction-details',trans.id]" routerLinkActive="router-link-active" >
+    <ion-card-content>
+      <ion-grid fixed>
+        <ion-row>
+            <ion-col text-right >
+                <h5><b>{{trans.status}}</b></h5>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col >
+              <ion-thumbnail>
+                  <img [src]="trans.imageUrl" />
+              </ion-thumbnail>
+          </ion-col>
+          
+          <ion-col text-center >
+              <h1><b> From:</b></h1>
+              <p>{{trans.from}}</p>
+          </ion-col>
+          <ion-col text-center>
+              <h1><b>To :</b></h1>
+              <p>{{trans.to}}</p>
+          </ion-col>
+        
+          
+          <ion-col text-right >
+              <h1 style="color: green"><b>{{trans.amount}}</b></h1>
+              <p color="success">units</p>
+          </ion-col>
+          
+        </ion-row>
+        
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    
+    <ion-card-content class="ion-text-center">
+      <b>No more transactions</b>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

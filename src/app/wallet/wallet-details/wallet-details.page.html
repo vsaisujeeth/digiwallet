@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>wallet-details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="wallet"></ion-back-button>
+      
+    </ion-buttons>
+    
+    <ion-buttons slot="secondary">
+      <ion-button (click)="onInfo()">
+        <ion-icon slot="start" name="information-circle"></ion-icon>
+        info
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content padding  id="cam">
+  <ion-item>
+    <ion-label position="floating">To address</ion-label>
+    <ion-button Fill="clear" (click)="onScan()" slot="end">
+      <ion-icon slot="icon-only" name="qr-scanner"></ion-icon>
+    </ion-button>
+    <ion-input [(ngModel)]="toAddress" type="text">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">Amount</ion-label>
+      <ion-input [(ngModel)]="amount" type="text"></ion-input>
+    </ion-item>
+
+    
+  <ion-button padding (click)="onSend()">
+    send
+  </ion-button>
+
+ 
+  <p padding id="result"></p>
+  <ion-grid fixed class="ion-padding">
+    <ion-row>
+      <ion-col class="ion-text-center" >
+          <h1>To receive show the QR code</h1>
+      </ion-col>
+      <ion-col size="6" offset="3">
+        <ion-img [src]="'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='+this.fromAddress"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+</ion-content>

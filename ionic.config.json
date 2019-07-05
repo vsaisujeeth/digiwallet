@@ -1,0 +1,7 @@
+{
+  "name": "DigiWallet",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

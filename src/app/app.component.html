@@ -1,0 +1,37 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu >
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle>
+              <ion-item lines="none" button [routerLink]="['/wallet']"  >
+                <ion-icon slot="start" name="cash" ></ion-icon>
+                <ion-label>Wallets</ion-label>
+              </ion-item>
+          </ion-menu-toggle>
+    
+          <ion-menu-toggle>
+              <ion-item lines="none" button [routerLink]="['/transactions']">
+                <ion-icon slot="start" name="analytics"></ion-icon>
+                <ion-label>Transactions</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          
+          <ion-menu-toggle>
+              <ion-item lines="none" (click)="logout()" button>
+                  <ion-icon slot="start" name="exit" ></ion-icon>
+                  <ion-label>Log Out</ion-label>
+              </ion-item>
+          </ion-menu-toggle>
+          
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

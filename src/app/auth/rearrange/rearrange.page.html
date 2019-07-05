@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>rearrange</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="auth"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div id="div" style="height:auto;
+    border:3px solid #000;
+    background-color: rgb(236, 196, 159);
+    padding: 8px;
+    border-radius: 16px;
+    margin: 8px;">
+    <b style="margin-bottom: 4px"> Arrange the code! </b>
+    
+        <ion-button class="ion-no-margin" no-padding color="danger" Fill="clear" style="position: fixed; right:60px; height: 16px;" (click)="onBack()">
+            <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+          </ion-button>
+        <ion-button class="ion-no-margin" no-padding color="danger" Fill="clear" style="position:fixed; right: 20px; height: 16px;"  (click)="onRefesh()">
+          <ion-icon slot="icon-only" name="refresh"></ion-icon>
+        </ion-button>
+    
+      
+    </div>
+
+    <div style="height:150px;
+    border:3px solid #000;
+    background-color: rgb(226, 236, 169);
+    padding: 8px;
+    border-radius: 16px;
+    margin: 8px;">
+    <p id="par"></p>
+    
+    </div>
+
+    <div class="ion-padding">
+        <ion-button shape="round" *ngFor="let word of words" Fill="outline" (click)="onClick(word)">
+            {{word}}
+        </ion-button>
+    </div>
+    
+    <ion-button disabled="true" id="but" style="position: absolute;
+                      margin-left:75%;   
+                      bottom:8px" 
+                      [routerLink]="['/set-password']" routerLinkActive="router-link-active" >
+      Next
+    </ion-button>
+    
+
+</ion-content>

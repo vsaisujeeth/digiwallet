@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Sign Up</ion-title>
+  
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="auth"></ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<div style="height:auto;
+            border:3px solid #000;
+            border-bottom: none;
+            background-color: rgb(226, 236, 169);
+            padding: 8px;
+            border-radius: 16px 16px 0px 0px;
+            margin: 8px 8px 0px 8px;">
+  <b style="margin-bottom: 4px"> This is your mnemonic code!</b>
+</div>
+<div style="height:auto;
+            border:3px solid #000;
+            background-color:rgb(199, 232, 233);
+            padding: 0px 8px;
+            border-radius: 0px 0px 16px 16px;
+            margin: 0px 8px;">
+    <h1 style="font-style: italic; font-size: 20px; margin: 8px"><b>" {{code}} "</b></h1>
+
+</div>
+
+<div style="height:auto;
+            border:3px solid #000;
+            background-color: rgb(236, 175, 175);
+            padding: 8px;
+            border-radius: 16px;
+            margin: 8px;">
+  <b>1. Please remember this code. We recommand you to write it on a piece of paper.</b>
+  <P><b>2. You can only recover your account with this code.</b></P>
+</div>
+
+<ion-button style=" position: absolute;
+                    margin-left:75%;   
+                  	bottom:16px;" [routerLink]="['/rearrange']" routerLinkActive="router-link-active"  >
+Next</ion-button>
+
+
+</ion-content>

@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="auth"></ion-back-button>
+  </ion-buttons>
+    <ion-title>Info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="ion-text-center" style="height:auto;
+  border:3px solid #000;
+  background-color: rgb(236, 196, 159);
+  padding: 8px;
+  border-radius: 16px; 
+  margin: 8px;">
+  
+
+  <div *ngIf="this.id == 0">
+      <h1>Wallet</h1>
+      <p style="user-select: all;">
+        {{wallet.Name}}
+      </p>
+    <h1>Address</h1>
+    <p style="user-select: all;">
+      {{wallet.address}}
+    </p>
+    <h1>Private Key</h1>
+    <p style="user-select: all;">
+      {{wallet.privateKey}}
+    </p>
+    <h1>Mnemonic code</h1>
+    <p style="user-select: all;">
+      {{auth.presentUser.mnemonic}}
+    </p>
+    <h1>Balance</h1>
+    <p style="user-select: all;" id="bal">
+    </p>
+  </div>
+
+  <div *ngIf="this.id != 0">
+      <h1>Token</h1>
+      <p style="user-select: all;">
+        {{wallet.Name}}
+      </p>
+    <h1>Token Address</h1>
+    <p style="user-select: all;">
+      {{wallet.address}}
+    </p>
+    <h1> Your Address</h1>
+    <p style="user-select: all;">
+      {{auth.presentUser.wallets[0].address }}
+    </p>
+
+    <h1>Private Key</h1>
+    <p style="user-select: all;">
+      {{wallet.privateKey}}
+    </p>
+    
+    <h1>Balance</h1>
+    <p style="user-select: all;" id="bal">
+    </p>
+  </div>
+      
+  </div>
+  
+  
+</ion-content>
