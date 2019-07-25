@@ -23,23 +23,23 @@
           <ion-label text-wrap><b>To    :</b> 
               <p style="user-select: all;">{{transactions[id].from}}</p>
           </ion-label>
-        </ion-item>
-        <ion-item>
+      </ion-item>
+      <ion-item>
             <ion-label text-wrap><b>Amount  :</b> 
                 <p style="user-select: all;">{{transactions[id].amount}} units</p>
-            </ion-label>
-          </ion-item>
+      </ion-label>
+      </ion-item>
           <ion-item>
               <ion-label text-wrap><b>Hash  :</b> 
                   <p style="user-select: all;">{{transactions[id].hash}}</p>
-              </ion-label>
-            </ion-item>
+            </ion-label>
+      </ion-item>
             
-            <ion-item lines='none'>
+      <ion-item lines='none'>
                 <ion-label text-wrap><b>Status  :</b> 
                     <p id="stat"></p>
                 </ion-label>
-              </ion-item>
+      </ion-item>
               <ion-button shape="round"  Fill="outline" [href]="'https://ropsten.etherscan.io/tx/'+transactions[id].hash">
                 More Info
               </ion-button>
