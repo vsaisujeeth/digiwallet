@@ -84,11 +84,10 @@ export class WalletDetailsPage implements OnInit {
   onSend() {
     document.getElementById('result').innerHTML = '' ;
     console.log('send');
-    if(this.id == 0)
-    {
+    if (this.id == 0) {
       console.log('hello');
       this.eth.send(this.amount, this.toAddress);
-    } else{
+    } else {
       this.eth.sendToken(
         this.amount,
         this.toAddress,

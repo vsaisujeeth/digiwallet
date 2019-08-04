@@ -58,6 +58,11 @@ export class TransactionDetailsPage implements OnInit {
       });
    }
 
+   onClick(x)
+   {
+    window.open(x, '_blank');
+   }
+
   ngOnInit() {
   }
 

@@ -94,7 +94,7 @@ export class AuthService {
   presentUser;
  // presentUser = this.users[0];
 
-  userIsAuthenticated = true;
+  userIsAuthenticated = false;
   constructor(private storage: Storage, ) {
      // storage.set('presentUser', this.presentUser);
 
