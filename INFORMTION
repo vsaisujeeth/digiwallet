@@ -1,0 +1,4 @@
+Instructions to Run :
+
+1. Install Ionic and type the command "ionic serve" from the cloned folder.
+2. change the working folder to the backend folder and run "node server.js".
