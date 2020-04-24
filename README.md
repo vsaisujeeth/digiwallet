@@ -1,6 +1,7 @@
 # Ethereum Wallet
 Designed and developed an Ethereum based cross-platform wallet at Digiledge,Bangalore. It allows users to transfer and manage ether and other ERC-20 tokens atease and convenience.Technologies used are Ionic, Angular, Web3, Javascript, NodeJs, Express. I am attaching some of the screenshots of this mobile app.
 
+I have devoloped this application in 20 days. I was the sole devoloper. 
 # Screenshots
 
 
